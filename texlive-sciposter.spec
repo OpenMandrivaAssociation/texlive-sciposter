@@ -93,6 +93,7 @@ are ignored.
 %doc %{_texmfdistdir}/doc/latex/sciposter/sciposterexample/blocksopen3vy.pdf
 %doc %{_texmfdistdir}/doc/latex/sciposter/sciposterexample/sciposter-example.tex
 %doc %{_texmfdistdir}/doc/latex/sciposter/scipostermanual.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -103,3 +104,5 @@ are ignored.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
