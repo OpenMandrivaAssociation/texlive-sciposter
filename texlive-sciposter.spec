@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This collection of files contains LaTeX packages for posters of
@@ -34,20 +32,12 @@ put in the current working directory or in the directories of
 your LaTeX distribution. For some reason graphicspath settings
 are ignored.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -94,7 +84,6 @@ are ignored.
 %doc %{_texmfdistdir}/doc/latex/sciposter/sciposterexample/blocksopen3vy.pdf
 %doc %{_texmfdistdir}/doc/latex/sciposter/sciposterexample/sciposter-example.tex
 %doc %{_texmfdistdir}/doc/latex/sciposter/scipostermanual.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -105,5 +94,3 @@ are ignored.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
