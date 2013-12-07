@@ -6,7 +6,7 @@
 # catalog-version 1.18
 Name:		texlive-sciposter
 Version:	1.18
-Release:	4
+Release:	5
 Summary:	Make posters of ISO A3 size and larger
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sciposter
