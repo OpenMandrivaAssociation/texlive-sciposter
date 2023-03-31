@@ -1,6 +1,6 @@
 Name:		texlive-sciposter
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Make posters of ISO A3 size and larger
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sciposter
