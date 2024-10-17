@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Make posters of ISO A3 size and larger
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/sciposter
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/sciposter
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sciposter.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sciposter.doc.r%{version}.tar.xz
